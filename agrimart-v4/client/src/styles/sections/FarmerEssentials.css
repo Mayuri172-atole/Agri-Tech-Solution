@@ -1,0 +1,18 @@
+.essentials-wrapper { padding: 40px 5%; }
+.essentials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.essential-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+.essential-card:hover { transform: translateY(-5px); }
+.essential-card img { width: 80px; height: 80px; }
+.essential-text h3 { font-size: 1.1rem; margin-bottom: 10px; }
+.essential-text button { background: none; border: none; font-weight: bold; color: #2e7d32; cursor: pointer; }

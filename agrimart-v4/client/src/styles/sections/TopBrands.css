@@ -1,0 +1,19 @@
+.brands-wrapper { padding: 40px 5%; background: white; text-align: center; }
+.brands-flex {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.brand-logo-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.brand-logo-circle:hover { border-color: #2e7d32; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }

@@ -1,0 +1,17 @@
+const mongoose = require('mongoose');
+
+const videoSchema = mongoose.Schema({
+  title:       { type: String, required: true, trim: true },
+  description: { type: String, default: '' },
+  category:    { type: String, enum: ['Seeds', 'Crop Nutrition', 'Crop Protection', 'Tutorials', 'Farmer Stories', 'Equipment', 'Organic'], required: true },
+  videoUrl:    { type: String, required: true },
+  videoKey:    { type: String, default: '' }, // S3 / Cloudinary key
+  thumbnailUrl:{ type: String, default: '' },
+  uploader:    { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+  uploaderRole:{ type: String },
+  isApproved:  { type: Boolean, default: false },
+  views:       { type: Number, default: 0 },
+  likes:       { type: Number, default: 0 },
+}, { timestamps: true });
+
+module.exports = mongoose.model('Video', videoSchema);

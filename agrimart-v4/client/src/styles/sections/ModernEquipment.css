@@ -1,0 +1,91 @@
+.modern-equip-section {
+  padding: 40px 5%;
+  background: #fdfdfd;
+}
+
+.equip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.equip-card {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  padding: 20px;
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.equip-card:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transform: translateY(-5px);
+}
+
+.equip-img-hold {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.equip-img-hold img {
+  width: 60%;
+  object-fit: contain;
+}
+
+.brand-tag {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #888;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.equip-details h3 {
+  font-size: 18px;
+  margin: 5px 0 12px 0;
+  color: #333;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.current-price {
+  font-size: 20px;
+  font-weight: 800;
+  color: #2e7d32;
+}
+
+.old-price {
+  font-size: 14px;
+  text-decoration: line-through;
+  color: #999;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  padding: 12px;
+  background: white;
+  border: 2px solid #2e7d32;
+  color: #2e7d32;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background: #2e7d32;
+  color: white;
+}

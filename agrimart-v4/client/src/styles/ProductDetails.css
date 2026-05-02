@@ -1,0 +1,161 @@
+.details-container {
+    padding: 40px 10%;
+    background-color: #f9f9f9;
+    min-height: 80vh;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: #2e7d32;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.details-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.product-image-box img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.product-info-box h1 {
+    font-size: 2rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.price-section {
+    margin: 20px 0;
+}
+
+.main-price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+.strike-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-left: 10px;
+}
+
+.action-btns {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.add-btn, .buy-btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-btn { background-color: #ff9800; color: white; }
+.buy-btn { background-color: #2e7d32; color: white; }
+
+.add-btn:hover { background-color: #e68a00; }
+.buy-btn:hover { background-color: #1b5e20; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .details-wrapper { grid-template-columns: 1fr; }
+}
+
+/* Image ko stable rakhne ke liye */
+.product-image-box {
+  flex: 1;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px; /* Pre-reserve space */
+}
+
+.main-product-img {
+  max-width: 100%;
+  max-height: 450px;
+  object-fit: contain; /* Image stretch nahi hogi */
+  transition: transform 0.3s ease;
+}
+
+/* Page stability */
+.product-details-page {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.details-wrapper {
+  display: flex;
+  gap: 40px;
+  padding: 20px 0;
+  align-items: flex-start; /* Items move nahi honge */
+}
+
+/* Mobile responsive fix */
+@media (max-width: 768px) {
+  .details-wrapper {
+    flex-direction: column;
+  }
+}
+.pd-page-root { background: #f8f9fa; min-height: 100vh; }
+.pd-main-container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+/* Breadcrumb */
+.pd-breadcrumb { font-size: 13px; margin-bottom: 20px; color: #666; cursor: pointer; }
+
+/* Main Grid */
+.pd-grid-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+
+/* Left Side Sticky Image */
+.pd-left-gallery { position: relative; }
+.pd-sticky-image { position: sticky; top: 100px; background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.pd-sticky-image img { width: 100%; height: 450px; object-fit: contain; }
+
+/* Right Side Content */
+.pd-title { font-size: 32px; font-weight: 700; color: #1a1a1a; margin: 10px 0; }
+.pd-badge { background: #e8f5e9; color: #2e7d32; padding: 4px 12px; border-radius: 4px; font-weight: 600; font-size: 12px; }
+.pd-price-block { margin: 25px 0; display: flex; align-items: baseline; gap: 15px; }
+.pd-current-price { font-size: 36px; font-weight: 800; color: #2e7d32; }
+.pd-old-price { text-decoration: line-through; color: #999; font-size: 20px; }
+
+/* Buttons */
+.pd-action-group { display: flex; gap: 15px; margin-top: 30px; }
+.pd-btn-cart, .pd-btn-buy { flex: 1; padding: 18px; border-radius: 8px; font-weight: 700; font-size: 16px; transition: 0.3s; border: none; cursor: pointer; }
+.pd-btn-cart { background: white; border: 2px solid #2e7d32; color: #2e7d32; }
+.pd-btn-buy { background: #2e7d32; color: white; }
+.pd-btn-buy:hover { background: #1b5e20; }
+
+/* 📱 MOBILE VIEW FIX 📱 */
+@media (max-width: 768px) {
+  .pd-grid-wrapper { grid-template-columns: 1fr; gap: 20px; }
+  .pd-sticky-image { position: relative; top: 0; padding: 10px; }
+  .pd-sticky-image img { height: 300px; }
+  .pd-title { font-size: 24px; }
+  
+  /* Mobile Sticky Buttons: Ekdum App jaisa */
+  .pd-action-group { 
+    position: fixed; bottom: 0; left: 0; width: 100%; 
+    background: white; padding: 10px; margin: 0; 
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.1); z-index: 1000;
+  }
+}

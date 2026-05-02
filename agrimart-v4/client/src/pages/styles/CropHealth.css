@@ -1,0 +1,42 @@
+.ch-wrapper { max-width:860px; margin:0 auto; padding:20px 16px; }
+.ch-hero { background:linear-gradient(135deg,#1b5e20,#66bb6a); border-radius:18px; padding:28px 24px; text-align:center; color:#fff; margin-bottom:24px; }
+.ch-hero h1 { margin:0; font-size:26px; }
+.ch-hero p { margin:8px 0 0; opacity:0.9; font-size:15px; }
+.ch-tabs { display:flex; gap:10px; margin-bottom:20px; }
+.ch-tab { flex:1; padding:12px; border:2px solid #c8e6c9; background:#f1f8e9; border-radius:12px; font-size:15px; font-weight:600; cursor:pointer; transition:all .2s; color:#2e7d32; }
+.ch-tab.active { background:#2e7d32; color:#fff; border-color:#2e7d32; }
+.ch-panel { background:#fff; border-radius:16px; padding:24px; box-shadow:0 2px 16px rgba(0,0,0,0.08); }
+.ch-upload-zone { border:2.5px dashed #81c784; border-radius:14px; min-height:180px; display:flex; align-items:center; justify-content:center; cursor:pointer; background:#f9fbe7; margin-bottom:14px; overflow:hidden; transition:border-color .2s; }
+.ch-upload-zone:hover { border-color:#2e7d32; }
+.ch-upload-placeholder { text-align:center; color:#81c784; }
+.ch-upload-icon { font-size:48px; display:block; margin-bottom:8px; }
+.ch-preview-img { width:100%; max-height:220px; object-fit:contain; padding:8px; }
+.ch-btn { width:100%; padding:14px; background:linear-gradient(90deg,#2e7d32,#43a047); color:#fff; border:none; border-radius:12px; font-size:16px; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px; transition:opacity .2s; }
+.ch-btn.disabled { background:#bdbdbd; cursor:not-allowed; }
+.ch-spinner { width:18px; height:18px; border:3px solid rgba(255,255,255,0.4); border-top-color:#fff; border-radius:50%; animation:spin .8s linear infinite; }
+@keyframes spin { to { transform:rotate(360deg); } }
+.ch-textarea { width:100%; min-height:130px; border:1.5px solid #c8e6c9; border-radius:12px; padding:12px 14px; font-size:14px; resize:vertical; font-family:inherit; outline:none; box-sizing:border-box; line-height:1.6; }
+.ch-textarea:focus { border-color:#2e7d32; }
+.ch-quick-chips { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0; }
+.ch-chip { background:#e8f5e9; border:1px solid #a5d6a7; border-radius:20px; padding:5px 13px; font-size:13px; cursor:pointer; color:#2e7d32; transition:all .2s; }
+.ch-chip:hover { background:#2e7d32; color:#fff; }
+.ch-result-card { background:#fff; border-radius:14px; padding:20px; margin-top:20px; box-shadow:0 4px 20px rgba(0,0,0,0.09); border:2px solid #e8f5e9; }
+.ch-result-header { display:flex; align-items:flex-start; gap:14px; margin-bottom:14px; }
+.ch-emoji { font-size:36px; }
+.ch-disease-name { margin:0 0 6px; color:#c62828; font-size:18px; }
+.ch-confidence-row { display:flex; align-items:center; gap:8px; font-size:13px; color:#555; }
+.ch-conf-bar { background:#e8f5e9; border-radius:20px; height:8px; width:120px; }
+.ch-conf-fill { background:linear-gradient(90deg,#66bb6a,#2e7d32); height:8px; border-radius:20px; transition:width .6s; }
+.ch-description { color:#555; background:#fff8e1; padding:12px 14px; border-radius:10px; border-left:4px solid #ffc107; font-size:14px; line-height:1.6; margin:0 0 16px; }
+.ch-section-title { color:#1b5e20; font-size:15px; margin:0 0 10px; padding-bottom:6px; border-bottom:2px solid #e8f5e9; }
+.ch-remedy-card { background:#f1f8e9; border-radius:10px; padding:12px 14px; margin-bottom:10px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }
+.ch-remedy-name { font-weight:700; color:#2e7d32; font-size:14px; }
+.ch-remedy-meta { font-size:12px; color:#777; margin-top:2px; }
+.ch-remedy-right { text-align:right; }
+.ch-remedy-price { font-weight:700; color:#e53935; font-size:15px; }
+.ch-shop-btn { display:inline-block; margin-top:4px; background:#2e7d32; color:#fff; padding:4px 12px; border-radius:8px; font-size:12px; text-decoration:none; font-weight:600; }
+.ch-fert-card { background:#e3f2fd; border-radius:8px; padding:10px 14px; margin-bottom:8px; font-size:14px; }
+.ch-brand-tag { background:#1976d2; color:#fff; font-size:11px; padding:1px 7px; border-radius:10px; margin-left:6px; }
+.ch-fert-meta { color:#555; font-size:13px; margin-top:3px; }
+.ch-prevention { background:#e8f5e9; border-radius:10px; padding:12px 14px; margin-top:14px; font-size:14px; color:#333; line-height:1.6; }
+.ch-disclaimer { text-align:center; color:#aaa; font-size:12px; margin-top:20px; }

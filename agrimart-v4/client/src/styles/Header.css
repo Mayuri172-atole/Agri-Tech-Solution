@@ -1,0 +1,85 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.logo h1 {
+  font-size: 24px;
+  color: #2e7d32;
+}
+
+.logo h1 span {
+  color: #ff9800;
+}
+
+.search-container {
+  flex: 0.6;
+  display: flex;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.search-btn {
+  background: #ff9800;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-item {
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-wrapper {
+  position: relative;
+}
+
+/* The Live Counter Badge */
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -5px;
+  background: #ff9800;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+.categories-bar {
+  background: #2e7d32;
+  color: white;
+  padding: 10px 5%;
+}
+
+.categories-bar ul {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 600;
+}

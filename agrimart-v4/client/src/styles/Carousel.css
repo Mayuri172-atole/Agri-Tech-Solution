@@ -1,0 +1,89 @@
+.carousel-container {
+  width: 100%;
+  height: 350px; /* Fixed height for consistency */
+  position: relative;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* Smooth fade effect */
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-content {
+  position: absolute;
+  bottom: 40px;
+  left: 10%;
+}
+
+.shop-btn {
+  background: #ffeb3b;
+  color: #333;
+  border: none;
+  padding: 12px 30px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.shop-btn:hover {
+  background: #fbc02d;
+  transform: scale(1.05);
+}
+
+.dots {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 10;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: white;
+  width: 25px; /* Makes active dot a capsule shape */
+  border-radius: 10px;
+}
+@media (max-width: 480px) {
+  .carousel-container {
+    height: 250px !important; /* Height fix karo */
+  }
+
+  .carousel-image {
+    object-fit: cover; /* Image kategi nahi, area fill karegi */
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-content h2 {
+    font-size: 20px !important; /* Text chhota karo mobile view mein */
+  }
+}

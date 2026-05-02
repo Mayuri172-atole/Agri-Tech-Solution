@@ -1,0 +1,40 @@
+export const navData = {
+  BRANDS: [
+    { title: "SEEDS", items: ["SYNGENTA", "NAMDHARI", "SEMINIS", "EAST WEST", "MAHYCO", "URJA SEEDS"] },
+    { title: "CROP PROTECTION", items: ["BAYER", "BASF", "FMC", "RALLIS", "CRYSTAL", "SUMITOMO"] },
+    { title: "CROP NUTRITION", items: ["MULTIPLEX", "HIFIELD", "SEA6 ENERGY", "GEOLIFE", "VEDGNA"] },
+    { title: "IMPLEMENTS", items: ["SNAP EXPORT", "NIYO FARMTECH", "TAPAS", "MITVA", "TATA AGRICO"] }
+  ],
+  SEEDS: [
+    { title: "HORTICULTURE CROPS", items: ["VEGETABLES SEEDS", "FRUIT SEEDS", "FLOWER SEEDS"] },
+    { title: "FIELD CROPS", items: ["FORAGES", "MAIZE/CORN", "PADDY", "MUSTARD", "JOWAR"] },
+    { title: "SPECIAL CATEGORY", items: ["POLYHOUSE", "EXOTICS", "FORESTRY", "URBAN GARDEN"] },
+    { title: "POPULAR PRODUCTS", items: ["TOMATO", "CHILLI", "BRINJAL", "CUCUMBER"] }
+  ],
+  "CROP PROTECTION": [
+    { title: "CHEMICAL PESTICIDES", items: ["INSECTICIDES", "FUNGICIDES", "HERBICIDES", "BACTERICIDES"] },
+    { title: "BIO/ORGANIC PESTICIDES", items: ["BIO INSECTICIDES", "BIO FUNGICIDES", "BIO VIRICIDES"] },
+    { title: "TRAPS AND LURES", items: ["STICKY TRAPS", "PHEROMONE LURES", "SOLAR LIGHT TRAPS"] },
+    { title: "OTHERS", items: ["ADJUVANTS", "DECOMPOSERS", "ANIMAL REPELLANT", "SAFETY KIT"] }
+  ],
+  "CROP NUTRITION": [
+    { title: "FERTILIZERS", items: ["CHEMICAL FERTILIZERS", "BIO/ORGANIC FERTILIZERS", "MICRO NUTRIENTS", "HUMIC ACIDS"] },
+    { title: "GROWTH PROMOTERS", items: ["PLANT GROWTH PROMOTERS", "PLANT ENHANCERS", "BIO STIMULANTS"] },
+    { title: "PLANT REGULATORS", items: ["YIELD BOOSTERS", "FRUIT ENHANCERS", "FLOWER BOOSTERS"] },
+    { title: "POPULAR", items: ["NPK FERTILIZERS", "LIQUID FERTILIZERS", "SEAWEED EXTRACTS"] }
+  ],
+  EQUIPMENTS: [
+    { title: "IMPLEMENTS", items: ["SPRAYERS", "BRUSH CUTTER", "WEEDER/TILLER", "CHAF CUTTER", "POWER REAPER"] },
+    { title: "AGRICULTURE TOOLS", items: ["NURSERY INPUTS", "FRUIT HARVESTER", "GARDEN TOOLS", "SEEDER"] },
+    { title: "ACCESSORIES", items: ["TARPAULIN", "MULCH", "SHADE NET", "TRAPS AND LURE", "CROP COVER"] },
+    { title: "IRRIGATION", items: ["PIPE", "WATER PUMP", "SPRINKLER", "DRIP KIT"] }
+  ],
+  ORGANIC: [
+    { title: "BIO/ORGANIC PESTICIDES", items: ["BIO INSECTICIDES", "BIO FUNGICIDES", "BIO VIRICIDES", "BIO NEMATICIDES"] },
+    { title: "CROP NUTRITION", items: ["BIO/ORGANIC FERTILIZERS", "BIO STIMULANTS/ACTIVATORS"] }
+  ],
+  TAPAS: [
+    { title: "FEATURED", items: ["Tapas Solar Trap", "Tapas Yellow Sticky Trap", "Tapas Pheromone Lure"] },
+    { title: "DEALS", items: ["Combo Offers", "New Launches"] }
+  ]
+};

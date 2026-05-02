@@ -1,0 +1,108 @@
+.fp-section { padding: 50px 20px; background: #fff; }
+.fp-container { max-width: 1200px; margin: 0 auto; }
+
+.fp-header { margin-bottom: 30px; text-align: left; }
+.fp-title { font-size: 26px; font-weight: 800; color: #1a1a1a; margin: 0; }
+.fp-subtitle { color: #666; font-size: 14px; margin-top: 4px; }
+
+.fp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.fp-card {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 16px;
+  padding: 15px;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.fp-card:hover {
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  transform: translateY(-8px);
+}
+
+.fp-badge {
+  position: absolute;
+  top: 12px; left: 12px;
+  background: #ff4757;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.fp-img-hold {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.fp-img-hold img {
+  max-height: 80%;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
+}
+
+.fp-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffa502;
+  margin-bottom: 8px;
+}
+
+.fp-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2d3436;
+  margin: 0 0 15px 0;
+  height: 40px;
+  overflow: hidden;
+}
+
+.fp-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fp-now { font-size: 20px; font-weight: 800; color: #2e7d32; }
+.fp-old { font-size: 14px; color: #999; text-decoration: line-through; margin-left: 8px; }
+
+.fp-add-btn {
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+.fp-add-btn:hover { background: #2e7d32; transform: scale(1.1); }
+
+/* Mobile Support */
+@media (max-width: 600px) {
+  .fp-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .fp-card { padding: 10px; border-radius: 12px; }
+  .fp-img-hold { height: 140px; }
+  .fp-name { font-size: 13px; height: 32px; }
+  .fp-now { font-size: 16px; }
+}

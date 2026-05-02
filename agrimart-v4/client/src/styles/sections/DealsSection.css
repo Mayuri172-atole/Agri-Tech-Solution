@@ -1,0 +1,43 @@
+.deals-container {
+  padding: 40px 5%;
+  background-color: #f9fbf9; /* Light green tint like BigHaat */
+}
+
+.deals-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 25px;
+}
+
+.title-area h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.title-area p {
+  color: #666;
+  font-size: 14px;
+}
+
+.view-all-btn {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.view-all-btn:hover {
+  background: #eee;
+}
+
+.deals-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Makes it reactive for mobile! */
+  justify-content: center;
+}

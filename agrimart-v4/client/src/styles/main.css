@@ -1,0 +1,229 @@
+/* 1. Global Setup & Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bighaat-green: #2e7d32;
+  --bighaat-orange: #ff9800;
+  --text-grey: #666;
+  --bg-cream: #f9fbf9;
+  --border-light: #f0f0f0;
+}
+
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 2. Layout Fix: Ensure sections don't overlap */
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+main section {
+  display: block;      /* Forces each section to be a full-width block */
+  width: 100%;
+  clear: both;         /* Prevents any previous section from floating into this one */
+  position: relative;
+  padding: 40px 5%;    /* Standardizes internal spacing */
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* 3. Carousel Styling */
+.carousel-container {
+  width: 100%;
+  position: relative;
+  background: #e0f2f1;
+  overflow: hidden;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.carousel-content {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+/* 4. Categories Section (Fixed overlapping) */
+.categories-section {
+  text-align: center;
+  background: #fff;
+}
+
+.cat-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.cat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 110px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.cat-item:hover { transform: translateY(-5px); }
+
+.cat-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #f1f8e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+}
+
+.cat-circle img { width: 50px; height: 50px; object-fit: contain; }
+
+/* 5. Deals Section (Product Grid Fix) */
+.deals-container {
+  background: #fff;
+}
+
+.deals-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.deals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* 6. General Buttons & UI Components */
+.btn-primary, .shop-btn, .view-all-btn {
+  background-color: var(--bighaat-orange);
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #e68a00;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  background-color: var(--bighaat-orange);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+/* 7. Cart Badge styling */
+.cart-badge {
+  background: red;
+  color: white;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+}
+
+/* 8. Link & List Resets */
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .carousel-slide img { height: 250px; }
+  .cat-grid { gap: 15px; }
+  .cat-item { width: 80px; }
+}
+/* --- Mobile Responsive Fix --- */
+@media (max-width: 768px) {
+  /* Grid ko 2 column mein set karo taaki cards bade dikhein */
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    padding: 10px !important;
+  }
+
+  /* Section headers ko thoda chhota karo mobile ke liye */
+  .section-title {
+    font-size: 20px !important;
+  }
+
+  /* Desktop wala Navbar mobile pe hide kar sakte ho agar Bottom Nav use kar rahe ho */
+  .category-nav {
+    display: none; 
+  }
+}
+
+/* --- Bottom Navigation Style (App Feel) --- */
+.mobile-bottom-nav {
+  display: none; /* Desktop pe chhupa do */
+}
+
+@media (max-width: 768px) {
+  .mobile-bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #eee;
+    justify-content: space-around;
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  }
+
+  .mobile-bottom-nav a {
+    text-decoration: none;
+    color: #636e72;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  .mobile-bottom-nav a svg {
+    font-size: 24px;
+    color: #2e7d32;
+  }
+  
+  /* Main content ke niche padding do taaki bottom nav content ko na chhupaye */
+  main {
+    padding-bottom: 70px;
+  }
+}

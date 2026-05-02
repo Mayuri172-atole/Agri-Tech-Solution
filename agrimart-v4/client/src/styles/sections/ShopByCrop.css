@@ -1,0 +1,92 @@
+/* Container for the whole section */
+.shop-by-crop {
+  padding: 40px 5%;
+  background: #ffffff;
+}
+
+/* Header with Title and 'View All' */
+.section-header-pro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.section-header-pro h2 {
+  font-size: 24px;
+  color: #1b5e20; /* Dark green for a pro agri look */
+  font-weight: 700;
+}
+
+.view-all-btn {
+  color: #2e7d32;
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.view-all-btn:hover {
+  text-decoration: underline;
+  color: #1b5e20;
+}
+
+/* Horizontal scrolling slider */
+.crop-slider {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 10px 5px 20px 5px;
+  scrollbar-width: none; /* For Firefox */
+}
+
+.crop-slider::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome/Safari */
+}
+
+/* Individual crop item */
+.crop-item {
+  text-align: center;
+  min-width: 110px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.crop-item:hover {
+  transform: translateY(-8px);
+}
+
+/* The circular icon background */
+.crop-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #f1f8e9; /* Light Mint Green */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border: 1px solid #c8e6c9;
+  transition: 0.3s;
+}
+
+.crop-item:hover .crop-circle {
+  background: #ffffff;
+  border-color: #4caf50;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.crop-circle img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.crop-item p {
+  margin-top: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}

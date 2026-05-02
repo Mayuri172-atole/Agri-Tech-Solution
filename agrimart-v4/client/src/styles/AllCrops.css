@@ -1,0 +1,131 @@
+/* Existing Container Styles */
+.all-crops-page {
+    padding: 40px 5%;
+    background-color: #fcfcfc;
+    min-height: 100vh;
+}
+
+.crops-container h1 {
+    text-align: center;
+    font-size: 28px; /* Thoda bada kiya pro look ke liye */
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.crops-search-wrapper {
+    max-width: 600px;
+    margin: 30px auto 50px auto;
+}
+
+.crops-search-wrapper input {
+    width: 100%;
+    padding: 15px 25px;
+    border: 1px solid #dfe1e5;
+    border-radius: 50px; /* Capsule shape for modern look */
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.crops-search-wrapper input:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 4px 15px rgba(46,125,50,0.1);
+}
+
+/* --- MODE B: Crops Grid (Circles) --- */
+.crops-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.crop-card-v2 {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.crop-card-v2:hover {
+    transform: translateY(-8px);
+}
+
+.crop-circle-v2 {
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+}
+
+.crop-circle-v2 img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.crop-card-v2 p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* --- MODE A & C: Products Grid (Cards for Deals/Categories) --- */
+/* Ye section naya hai jo ProductCard ko handle karega */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Message Styles */
+.no-crop-msg {
+    text-align: center;
+    padding: 100px 20px;
+    color: #888;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .crops-grid {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        gap: 20px;
+    }
+    
+    .crop-circle-v2 {
+        width: 90px;
+        height: 90px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 15px;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* AllCrops.css mein jo sabse main class hai usey pakdo */
+.all-crops-container {
+    padding-top: 180px !important; /* Navbar ki height ke hisaab se adjust kar lena */
+    min-height: 100vh;
+    display: block; /* Ensure karo block ho */
+}
+.all-crops-page {
+    background-color: #ffffff; /* Page ka background saaf rakho */
+    position: relative;
+    z-index: 1; /* Navbar ka 1000+ hai, toh ye niche rahega */
+}
